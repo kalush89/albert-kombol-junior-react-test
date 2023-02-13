@@ -1,0 +1,77 @@
+.button-container {
+    padding: 16px 32px;
+    text-transform: uppercase;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+
+}
+
+.primary {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+}
+
+.primary:hover {
+    background-color: var(--primary-lite);
+}
+
+
+.hollow {
+    background-color: white;
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+
+.hollow:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+
+.tiny {
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+
+.tiny:hover {
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+}
+
+
+.add-to-cart {
+    height: 52px;
+    width: 52px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    line-height: 50px;
+}
+
+.big-primary {
+    font-weight: 600;
+    font-size: 14px;
+    height: 52px;
+    width: 100%;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.big-primary:hover {
+    background-color: var(--primary-lite);
+}

@@ -1,0 +1,28 @@
+.category-tab-container {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 50px;
+}
+
+.category-tab-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    text-align: left;
+    text-transform: capitalize;
+
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-list a {
+    color: var(--primary-dark);
+}

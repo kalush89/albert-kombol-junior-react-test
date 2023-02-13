@@ -1,0 +1,53 @@
+.text-attribute-picker-container {
+    border: 1px solid black;
+    text-align: center;
+    margin: 3px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.selected {
+    height: 24px;
+    min-width: 24px;
+    max-width: auto;
+    background-color: black;
+    color: white;
+    line-height: 150%;
+
+}
+
+.normal {
+    height: 24px;
+    min-width: 24px;
+    max-width: auto;
+    background-color: white;
+    color: black;
+    line-height: 150%;
+
+}
+
+.large-normal {
+    height: 45px;
+    width: 63px;
+    background-color: white;
+    color: black;
+    line-height: 270%;
+}
+
+.large-selected {
+
+    width: 63px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    line-height: 270%;
+}
+
+.large-selected:hover {
+    background-color: black;
+    color: white;
+    border: none;
+}

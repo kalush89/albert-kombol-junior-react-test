@@ -1,0 +1,65 @@
+.swatch-picker-container {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    align-self: center;
+}
+
+.item-frame {
+    background-color: #FFFFFF;
+}
+
+.normal {
+    height: 16px;
+    width: 16px;
+}
+
+.normal:hover {
+    background-color: var(--primary-dark);
+    color: white;
+
+}
+
+
+.selected {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    outline: 1px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+.selected:hover {
+    background-color: var(--primary-dark);
+    color: white;
+
+}
+
+
+.large-normal {
+
+    height: 32px;
+    width: 32px;
+}
+
+.large-normal:hover {
+    background-color: var(--primary-dark);
+    color: white;
+
+}
+
+
+.large-selected {
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    outline: 1px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+.large-selected:hover {
+    background-color: var(--primary-dark);
+    color: white;
+
+}

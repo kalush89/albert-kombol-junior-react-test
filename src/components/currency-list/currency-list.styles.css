@@ -1,0 +1,31 @@
+.currencies-container {
+    position: absolute;
+    left: 1173px;
+    top: 65px;
+    z-index: 7;
+    background-color: white;
+    padding: 5px 0;
+    box-shadow: 0px 4px 35px var(--shadow);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--primary-dark);
+    text-align: left;
+    height: 45px;
+    width: 114px;
+    padding: 10% 20%;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color: #EEEEEE;
+}
