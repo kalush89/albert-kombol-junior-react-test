@@ -18,11 +18,12 @@
     border-radius: 0%;
     height: 24px;
     width: 24px;
-
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    background-image: url('../../assets/icons/plus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
 }
 
 .mini-right-cart-item-container .add-reduce .add-quantity:hover {
@@ -44,9 +45,10 @@
     height: 24px;
     width: 24px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   
+    background-image: url('../../assets/icons/small-minus.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .mini-right-cart-item-container .add-reduce .reduce-quantity:hover {
@@ -95,9 +97,10 @@
     height: 45px;
     width: 45px;
     cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+   
+    background-image: url('../../assets/icons/plus.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .right-large-cart-item-container .add-reduce .add-quantity:hover {
@@ -119,9 +122,10 @@
     height: 45px;
     width: 45px;
     cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+   
+    background-image: url('../../assets/icons/big-minus.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .right-large-cart-item-container .add-reduce .reduce-quantity:hover {

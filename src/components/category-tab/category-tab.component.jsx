@@ -5,7 +5,7 @@ import ProductCard from '../product-card/product-card.component';
 
 import './category-tab.styles.css';
 
-class CategoryTab extends React.PureComponent {
+class CategoryTab extends React.Component {
 
 
         render() {

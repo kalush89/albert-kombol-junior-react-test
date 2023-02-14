@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React from 'react';
 
 import "./button.styles.css";
 
@@ -12,7 +12,7 @@ export const BUTTON_TYPE_CLASSES = {
   };
 
 
-class Button extends Component {
+class Button extends React.Component {
 
 render(){
 const { children, buttonType, ...otherProps } = this.props;

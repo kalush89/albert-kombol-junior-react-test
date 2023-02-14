@@ -6,7 +6,7 @@ const initialState = {
     cartTotal: 0,
     cartCount: 0,
     selectedAttributes: [],
-    sliderMainImages: [],
+    sliderImagesInView: [],
     tax: 0,
     flashIsActive: false,
     
@@ -50,8 +50,8 @@ export const cartSlice = createSlice({
             setItemAttribute(state.selectedAttributes, action.payload.item, action.payload.attributeId, action.payload.value);
         },
 
-        setSliderMainImage: (state, action) => {
-            state.sliderMainImages = setMainImage(state.sliderMainImages, action.payload);
+        setImagesInView: (state, action) => {
+            state.sliderImagesInView = setSliderImagesInView(state.sliderImagesInView, action.payload);
         },
 
         setCartItemsTax: (state, action) => {
@@ -247,13 +247,13 @@ const setItemAttribute = (selectedAttributes,
  * @param {*} uniqueAttributes 
  * @returns 
  */
-const setMainImage = (sliderMainImages, { image, uniqueAttributes }) => {
-    const exists = sliderMainImages.find( mainImage => mainImage.id === uniqueAttributes)
+const setSliderImagesInView = (sliderImagesInView, { image, uniqueAttributes }) => {
+    const exists = sliderImagesInView.find( sliderImage => sliderImage.id === uniqueAttributes)
     if(exists){
-       return  sliderMainImages.map(mainImage =>  
-        mainImage.id === uniqueAttributes ? {...mainImage, image: image}: mainImage
+       return  sliderImagesInView.map(sliderImage =>  
+        sliderImage.id === uniqueAttributes ? {...sliderImage, image: image}: sliderImage
     )}
-    return [...sliderMainImages, {image: image, id: uniqueAttributes}]
+        return [...sliderImagesInView, {image: image, id: uniqueAttributes}]
     
 }
 
@@ -274,7 +274,7 @@ export const {
     updateCartGrandTotalPrice,
     updateCartItemsCount,
     setSelectedAttribute,
-    setSliderMainImage,
+    setImagesInView,
     setCartItemsTax,
     toggleCounterFlash,
  } = cartSlice.actions

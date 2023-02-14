@@ -10,6 +10,25 @@ import './cart-overlay.styles.css';
 
 
 class CartOverlay extends React.Component {
+    constructor(props) {
+        super(props);
+        this.ref = React.createRef();
+    }
+
+    handleOnClickOutside = (e) => {
+        if(this.ref.current && !this.ref.current.contains(e.target)){
+             this.props.toggleCartOverlay && this.props.toggleCartOverlay();
+             document.body.classList.toggle("no-scroll");
+        }
+    };
+
+    componentDidMount() {
+        document.addEventListener('click', this.handleOnClickOutside, true);
+    }
+    
+    componentWillUnmount() {
+        document.removeEventListener('click', this.handleOnClickOutside, true);
+    }
    
 
     handleClick = () =>{
@@ -21,8 +40,8 @@ class CartOverlay extends React.Component {
     render(){
         const { selectedCurrency, cartTotal, cartCount, cartItems} = this.props;
         return(
-            <div className="cart-overlay-container">
-                <div className="cart-overlay-main">
+            <div className="cart-overlay-container" >
+                <div className="cart-overlay-main" ref={this.ref}>
                     <div className="cart-item-count">
                         <span id="left">My Bag,</span>
                         

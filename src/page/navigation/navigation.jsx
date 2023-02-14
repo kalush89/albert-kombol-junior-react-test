@@ -75,10 +75,11 @@ class Navigation extends React.Component {
                             <span className="chevron-icon">
                                 <img src={chevronicon} alt="currency" style={style} />
                             </span>
-                            {this.state.currencyDropDown &&
-                                <CurrencyList  />
-                            }
+                            
                         </div>
+                        {this.state.currencyDropDown &&
+                                <CurrencyList toggleCurrencyDropDown={this.toggleCurrencyDropDown} />
+                            }
                         <div className="cart-navigation" onClick={() => this.handleOverlay()}>
                             <img src={carticon} alt="cart" />
                             <span className={this.props.flashIsActive ? "counter-flash":""}></span>

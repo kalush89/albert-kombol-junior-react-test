@@ -1,19 +1,19 @@
 .currencies-container {
     position: absolute;
-    margin-top: 25px;
-    margin-left: -22px;
+    margin-top: 270px;
+    margin-right: -20px;
     z-index: 7;
     background-color: white;
     padding: 5px 0;
     box-shadow: 0px 4px 35px var(--shadow);
 }
 
-ul {
+.currencies-container ul {
     list-style: none;
     padding: 0;
 }
 
-ul li {
+.currencies-container ul li {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -26,6 +26,6 @@ ul li {
     cursor: pointer;
 }
 
-ul li:hover {
+.currencies-container ul li:hover {
     background-color: #EEEEEE;
 }

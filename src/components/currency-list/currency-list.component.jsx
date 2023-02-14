@@ -17,13 +17,12 @@ class CurrencyList extends React.Component {
 handleSelect(e){
   const arr =  e.target.innerHTML.split(' ');
   this.props.setSelectedCurrency(arr)
-  //this.props.updateCartTotal(arr[0]);
- // this.props.toggleCurrencyList();
+  this.props.toggleCurrencyDropDown()
 }
 
 handleOnClickOutside = (e) => {
    if(this.ref.current && !this.ref.current.contains(e.target)){
-        this.props.onClickOutside && this.props.onClickOutside();
+        this.props.toggleCurrencyDropDown && this.props.toggleCurrencyDropDown();
    }
 };
 
@@ -37,7 +36,7 @@ componentWillUnmount() {
 
     render(){
         const { currencies } = this.props;
-        console.log('outside', this.props.onClickOutside)
+       
         return(
             <div className="currencies-container" ref={this.ref} >
                 <ul>
@@ -64,8 +63,6 @@ const mapDispatchToProps = (dispatch) => {
     
     return {
         setSelectedCurrency:(ownProps)=> dispatch(setSelectedCurrency(ownProps)),
-        
-        //updateCartTotal:(ownProps) => dispatch(updateCartTotal(ownProps)),
     }
 };
 

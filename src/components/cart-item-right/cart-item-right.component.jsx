@@ -5,7 +5,7 @@ import Modal from "../modal/modal.component";
 
 import arrowIcon from "../../assets/icons/arrow.png";
 
-import { setSliderMainImage, toggleCounterFlash } from "../../store/cartSlice";
+import { setImagesInView, toggleCounterFlash } from "../../store/cartSlice";
 
 import "./cart-item-right.styles.css";
 
@@ -53,8 +53,8 @@ class CartItemRight extends Component {
      index = 1;
      nextSlide = (images, uniqueAttributes) => {
         const imageCount = images.length;
-        
-        this.props.setSliderMainImage(images[this.index], uniqueAttributes);
+        const args = {image: images[this.index], uniqueAttributes}
+        this.props.setImagesInView(args);
         this.index++;
         
         if(this.index === imageCount){
@@ -65,8 +65,8 @@ class CartItemRight extends Component {
 
      prevSlide = (images, uniqueAttributes) => {
         const imageCount = images.length;
-        
-        this.props.setSliderMainImage(images[this.index], uniqueAttributes);
+        const args = {image: images[this.index], uniqueAttributes}
+        this.props.setImagesInView(args);
         
        if(this.index === 0) {
         this.index = imageCount -1;
@@ -78,8 +78,8 @@ class CartItemRight extends Component {
      
     render(){
         const { count, gallery, uniqueAttributes } = this.props.theProps.cartItem;
-        const { rightCartItemStyle, sliderMainImages} = this.props;
-        const theImage = sliderMainImages.find(mainImage => mainImage.id === JSON.stringify(uniqueAttributes))?.image;
+        const { rightCartItemStyle, sliderImagesInView} = this.props;
+        const theImage = sliderImagesInView.find(imageInView => imageInView.id === JSON.stringify(uniqueAttributes))?.image;
         
         return(
             
@@ -94,9 +94,9 @@ class CartItemRight extends Component {
                     />
 
                 <div className="add-reduce">
-                    <span className='add-quantity' onClick={(e) =>this.handleIncrease(e)}>+</span>
+                    <span className='add-quantity' onClick={(e) =>this.handleIncrease(e)}></span>
                     <span className='item-count'>{count}</span>
-                    <span className='reduce-quantity'  onClick={() =>this.handleDecrease()}>-</span>
+                    <span className='reduce-quantity'  onClick={() =>this.handleDecrease()}></span>
                     
                 </div>
                 <div className="image-slider">
@@ -128,16 +128,16 @@ class CartItemRight extends Component {
 const mapDispatchToProps = (dispatch) => {
     
     return {
-        setSliderMainImage:(ownProps, ownProps1) => dispatch(setSliderMainImage(ownProps, ownProps1)), 
+        setImagesInView:(ownProps) => dispatch(setImagesInView(ownProps)), 
         toggleCounterFlash:() => dispatch(toggleCounterFlash()),
     }
 };
 
 const mapStateToProps = (state) => {
-    const { sliderMainImages } = state.cartSlice;
+    const { sliderImagesInView } = state.cartSlice;
 
     return {
-        sliderMainImages,
+        sliderImagesInView,
     }
 }
 

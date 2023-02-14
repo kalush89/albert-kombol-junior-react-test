@@ -5,7 +5,7 @@ import { fetchCategoryDetails } from "../../store/categorySlice";
 
 import CategoryTab from "../../components/category-tab/category-tab.component";
 
-class Category extends React.PureComponent {
+class Category extends React.Component {
     
       
     componentDidMount(){
