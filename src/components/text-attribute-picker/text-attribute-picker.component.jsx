@@ -14,7 +14,8 @@ class TextAttributePicker extends Component {
 
     render(){
         const {theProductId, attributeId, value, uniqueAttributes, selected, normal, product } = this.props;
-        const existingAttribute = uniqueAttributes.find(att => att.productId === theProductId &&
+        const existingAttribute = uniqueAttributes.find(att => 
+            att.productId === theProductId &&
              att.attributeItemValue === value &&
               att.attributeId === attributeId);
    

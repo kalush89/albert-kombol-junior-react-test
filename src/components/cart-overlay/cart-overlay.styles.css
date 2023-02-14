@@ -9,7 +9,7 @@
     overflow-y: scroll;
 }
 
-.cart-overlay-main {
+.cart-overlay-container .cart-overlay-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,31 +19,31 @@
     position: relative;
     width: 340px;
     height: 650px;
-    left: 990px;
-    top: 0;
+    margin-top: -5px;
+    margin-left: 970px;
     z-index: 5;
     background-color: white;
     margin-bottom: 70px;
 }
 
-.cart-item-count {
+.cart-overlay-container .cart-overlay-main .cart-item-count {
     width: 100%;
     height: 26px;
     font-size: 16px;
     color: var(--primary-dark);
 }
 
-.cart-item-count #left {
+.cart-overlay-container .cart-overlay-main .cart-item-count #left {
     font-weight: 700;
 }
 
-.cart-item-count #right {
+.cart-overlay-container .cart-overlay-main .cart-item-count #right {
     font-weight: 500;
 }
 
 
 
-.cart-overlay-items {
+.cart-overlay-container .cart-overlay-main .cart-overlay-items {
     display: flex;
     flex-direction: column;
     height: 420px;
@@ -51,27 +51,24 @@
     overflow-y: hidden;
 }
 
-.cart-overlay-items:hover {
+.cart-overlay-container .cart-overlay-main .cart-overlay-items:hover {
     overflow-y: scroll;
 }
 
-
-
-
-.total-container-overlay {
+.cart-overlay-container .cart-overlay-main .total-container-overlay {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-.total-label {
+.cart-overlay-container .cart-overlay-main .total-container-overlay .total-label {
     width: 55px;
     font-weight: 500;
     font-size: 16px;
     margin-right: 139px;
 }
 
-.total-amount {
+.cart-overlay-container .cart-overlay-main .total-container-overlay .total-amount {
     font-weight: 700;
     font-size: 16px;
     width: 95px;
@@ -80,14 +77,14 @@
 }
 
 
-.cart-overlay-footer {
+.cart-overlay-container .cart-overlay-main .cart-overlay-footer {
     display: flex;
     flex-direction: row;
     gap: 12px;
     width: 100%;
 }
 
-.cart-overlay-footer a {
+.cart-overlay-container .cart-overlay-main .cart-overlay-footer a {
     text-decoration: none;
     color: var(--primary-dark);
 }

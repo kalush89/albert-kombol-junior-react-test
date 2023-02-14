@@ -100,11 +100,27 @@ class ProductDescription extends React.Component {
                              <div className={`${attribute.id.toLowerCase()}-picker`}>
                                 {attribute.items.map(item => (
                                     attribute.type === 'swatch'?
-                                        <SwatchPicker key={item.id} theProductId={id} attributeId={attribute.id} 
-                                        value={item.value} uniqueAttributes={this.props.selectedAttributes} selected={'large-selected'} normal={'large-normal'} product={this.props.state.product} />
+                                        <SwatchPicker 
+                                        key={item.id} 
+                                        theProductId={id} 
+                                        attributeId={attribute.id} 
+                                        value={item.value} 
+                                        uniqueAttributes={this.props.selectedAttributes} 
+                                        selected={'large-selected'} 
+                                        normal={'large-normal'} 
+                                        product={this.props.state.product} 
+                                        />
                                         : 
-                                        <TextAttributePicker key={item.id} theProductId={id} attributeId={attribute.id}
-                                         value={item.value} uniqueAttributes={this.props.selectedAttributes} selected={'large-selected'} normal={'large-normal'} product={this.props.state.product} /> 
+                                        <TextAttributePicker 
+                                        key={item.id} 
+                                        theProductId={id} 
+                                        attributeId={attribute.id}
+                                        value={item.value} 
+                                        uniqueAttributes={this.props.selectedAttributes} 
+                                        selected={'large-selected'} 
+                                        normal={'large-normal'} 
+                                        product={this.props.state.product} 
+                                        /> 
                                              
                                 ))}
                              </div> 

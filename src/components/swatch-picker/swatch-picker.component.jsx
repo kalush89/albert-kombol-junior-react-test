@@ -8,11 +8,12 @@ import './swatch-picker.styles.css';
 class SwatchPicker extends Component {
 
     handleSelect = (product, attributeId, value) => {
-        const args = {item:product, attributeId,value}
+        const args = {item:product, attributeId, value}
         this.props.setSelectedAttribute(args);
     };
 
     render(){
+        
         const { 
             theProductId, 
             attributeId, 
@@ -22,20 +23,21 @@ class SwatchPicker extends Component {
             product, 
             uniqueAttributes 
         } = this.props;
-        
+
+       
         const existingAttribute = uniqueAttributes.find(att => 
             att.productId === theProductId && 
             att.attributeItemValue === value && 
             att.attributeId === attributeId);
-    
+    //value === '#FFFFFF'?{backgroundColor: value, border:"1px solid"}:{backgroundColor: value, borderColor: 'black'}
         return(
-            <div className="swatch-picker-container" onClick={()=> 
-            product && this.handleSelect(product, attributeId, value)}>
-            <div className='item-frame'>
+            <div className="swatch-picker-container" onClick={()=> product && this.handleSelect(product, attributeId, value)}>
+           
                     <div className={ existingAttribute ? selected : normal} 
-                    style={{backgroundColor:value, borderColor: 'white'}}>
+                    style={value === '#FFFFFF'?{backgroundColor: value, border:"1px solid #999595"}:{backgroundColor: value, }}
+                    >
                     </div>
-                </div>
+               
                 
             </div>
         );

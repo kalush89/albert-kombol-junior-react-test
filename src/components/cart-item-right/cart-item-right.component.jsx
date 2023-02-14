@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import Modal from "../modal/modal.component";
 
-//Add import for icons
+import arrowIcon from "../../assets/icons/arrow.png";
 
 import { setSliderMainImage, toggleCounterFlash } from "../../store/cartSlice";
 
@@ -24,12 +24,13 @@ class CartItemRight extends Component {
     }
 
     handleIncrease = () =>{
-        const args = {itemToIncrease:this.props.theProps.cartItem, currency:this.props.selectedCurrency[0].currency.symbol}
+        const args = {itemToIncrease:this.props.theProps.cartItem, currency:this.props.selectedCurrency[0]}
         this.props.theProps.increaseItemCount(args);
        
         this.props.toggleCounterFlash();
        
         setTimeout(this.props.toggleCounterFlash, 500);
+        
      }
 
      handleDecrease = () =>{
@@ -37,14 +38,13 @@ class CartItemRight extends Component {
         if(item.count === 1){
             this.toggleModal();
         }else{
-            const args = {itemToIncrease:item, currency:this.props.selectedCurrency[0].currency.symbol}
+            const args = {itemToRemove:item, currency:this.props.selectedCurrency[0]}
             this.props.theProps.decreaseItemCount(args);
-            
         }
      }
 
      handleRemoval = () =>{
-            const args = {itemToIncrease:this.props.theProps.cartItem, currency:this.props.selectedCurrency[0].currency.symbol}
+            const args = {itemToRemove:this.props.theProps.cartItem, currency:this.props.selectedCurrency[0]}
             this.props.theProps.decreaseItemCount(args);
            
             this.toggleModal();
@@ -94,7 +94,7 @@ class CartItemRight extends Component {
                     />
 
                 <div className="add-reduce">
-                    <span className='add-quantity' onClick={() =>this.handleIncrease()}>+</span>
+                    <span className='add-quantity' onClick={(e) =>this.handleIncrease(e)}>+</span>
                     <span className='item-count'>{count}</span>
                     <span className='reduce-quantity'  onClick={() =>this.handleDecrease()}>-</span>
                     
@@ -109,8 +109,8 @@ class CartItemRight extends Component {
                    {
                     gallery.length > 1 ?
                         <div className="slider-nav">
-                            <div className="nav-prev" onClick={() => this.prevSlide(gallery, JSON.stringify(uniqueAttributes))} ></div>
-                            <div className="nav-next" onClick={() => this.nextSlide(gallery, JSON.stringify(uniqueAttributes))} ></div>
+                            <div className="nav-prev" onClick={() => this.prevSlide(gallery, JSON.stringify(uniqueAttributes))} ><img src={arrowIcon} alt="previous" /></div>
+                            <div className="nav-next" onClick={() => this.nextSlide(gallery, JSON.stringify(uniqueAttributes))} ><img src={arrowIcon} alt="next" style={{rotate:'180'}} /></div>
                         </div>
                     :''
                 }

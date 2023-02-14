@@ -14,7 +14,7 @@
     justify-content: center;
     gap: 15px;
    
-    height: 50px;
+    height: 48px;
     text-transform: uppercase;
    
 }
@@ -35,9 +35,7 @@
     color: var(--primary-green);
     font-weight: 600;
     border-bottom: 2px solid var(--primary-green);
-    
 }
-
 
 .actions-nav {
     display: flex;
@@ -60,7 +58,7 @@
     font-size: 18px;
 }
 
-.cart-nav {
+.cart-navigation {
     cursor: pointer;
 }
 

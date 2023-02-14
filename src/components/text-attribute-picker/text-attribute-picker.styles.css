@@ -9,7 +9,7 @@
     line-height: 18px;
 }
 
-.selected {
+.text-attribute-picker-container .selected {
     height: 24px;
     min-width: 24px;
     max-width: auto;
@@ -19,7 +19,7 @@
 
 }
 
-.normal {
+.text-attribute-picker-container .normal {
     height: 24px;
     min-width: 24px;
     max-width: auto;
@@ -29,7 +29,7 @@
 
 }
 
-.large-normal {
+.text-attribute-picker-container .large-normal {
     height: 45px;
     width: 63px;
     background-color: white;
@@ -37,7 +37,7 @@
     line-height: 270%;
 }
 
-.large-selected {
+.text-attribute-picker-container .large-selected {
 
     width: 63px;
     height: 45px;
@@ -46,7 +46,7 @@
     line-height: 270%;
 }
 
-.large-selected:hover {
+.text-attribute-picker-container .large-selected:hover {
     background-color: black;
     color: white;
     border: none;

@@ -138,8 +138,8 @@ const increaseCartItemCount = (cartItems, itemToIncrease) => {
  */
 const decreaseCartItemCount = ((cartItems, itemToRemove) => {
     //check if the variant exists in the cart
-    const existingItem = cartItems.find(item => {
-       return item.id === itemToRemove.id && JSON.stringify(item.uniqueAttributes) === JSON.stringify(itemToRemove.uniqueAttributes)
+    const existingItem = cartItems.find(cartItem => {
+       return cartItem.id === itemToRemove.id && JSON.stringify(cartItem.uniqueAttributes) === JSON.stringify(itemToRemove.uniqueAttributes)
      } );
 
    //if one matching item is left, remove it

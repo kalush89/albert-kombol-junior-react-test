@@ -6,7 +6,7 @@ import Navigation from './page/navigation/navigation';
 import Category from './page/category/category';
 import Cart from './page/cart/cart';
 import ProductDescription from './page/product-description/product-description';
-import CategoryTab from './components/category-tab/category-tab.component';
+
 
 class App extends React.Component {
 

@@ -1,0 +1,100 @@
+.large-cart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 1200px;
+    margin: 60px auto;
+}
+
+.large-cart-container .cart-title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+
+    text-transform: uppercase;
+
+    color: var(--primary-dark);
+}
+
+.large-cart-container .cart-content {
+    width: 100%;
+}
+
+.large-cart-container .cart-content .content-horizontal {
+    border: 1px solid #E5E5E5;
+    width: 100%;
+    margin: 30px 0;
+}
+
+
+.large-cart-container .cart-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.large-cart-container .cart-footer .footer-horizontal {
+    border: 1px solid #E5E5E5;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.large-cart-container .cart-footer .tax {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 24px;
+}
+
+.large-cart-container .cart-footer .tax .tax-label {
+    font-weight: 400;
+}
+
+.large-cart-container .cart-footer .tax .tax-value {
+    font-weight: 700;
+}
+
+
+.large-cart-container .cart-footer .quantity {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 24px;
+}
+
+.large-cart-container .cart-footer .quantity .quantity-label {
+    font-weight: 400;
+}
+
+.large-cart-container .cart-footer .quantity .quantity-value {
+    font-weight: 700;
+}
+
+
+.large-cart-container .cart-footer .total-container-large {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 24px;
+    margin: 8px 0 16px 0;
+}
+
+.large-cart-container .cart-footer .total-container-large .total-label {
+    font-weight: 500;
+}
+
+.large-cart-container .cart-footer .total-container-large .total-value {
+    font-weight: 700;
+}
+
+.large-cart-container .cart-footer .order {
+    width: 279px;
+    height: 43px;
+    margin-bottom: 60px;
+}

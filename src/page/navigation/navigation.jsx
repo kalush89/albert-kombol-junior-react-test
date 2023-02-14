@@ -42,8 +42,13 @@ class Navigation extends React.Component {
     }
 
     handleOverlay = () => {   
+        if(this.state.isCartOverlayOpen ){
               this.toggleCartOverlay()
-              document.body.classList.toggle("no-scroll");
+              document.body.classList.remove("no-scroll");
+        }else {
+          this.toggleCartOverlay()
+          document.body.classList.add("no-scroll");
+        }   
       }
 
     render(){
@@ -74,17 +79,17 @@ class Navigation extends React.Component {
                                 <CurrencyList  />
                             }
                         </div>
-                        <div className="cart-nav" onClick={() => this.handleOverlay()}>
+                        <div className="cart-navigation" onClick={() => this.handleOverlay()}>
                             <img src={carticon} alt="cart" />
                             <span className={this.props.flashIsActive ? "counter-flash":""}></span>
                                         {
                                             cartCount > 0 ?
                                             <span className='item-counter'>{cartCount}</span> : ''
                                         }
-                            {this.state.cartOverlayOpen && 
+                        </div>
+                        {this.state.cartOverlayOpen && 
                                 <CartOverlay toggleCartOverlay={this.toggleCartOverlay} />
                             }
-                        </div>
                     </div>
                 </div>
                 <Outlet />

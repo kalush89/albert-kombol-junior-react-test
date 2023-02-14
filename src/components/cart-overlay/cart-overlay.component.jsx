@@ -20,7 +20,6 @@ class CartOverlay extends React.Component {
    
     render(){
         const { selectedCurrency, cartTotal, cartCount, cartItems} = this.props;
-        
         return(
             <div className="cart-overlay-container">
                 <div className="cart-overlay-main">
