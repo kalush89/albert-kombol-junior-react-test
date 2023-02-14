@@ -20,11 +20,15 @@ class ProductDescription extends React.Component {
         this.state = {
             showModal: false
           };
+          this.myRef = React.createRef()
     }
 
+   
+    
     componentDidMount(){
         window.scrollTo(0, 0);
-         
+        this.myRef.current.innerHTML = this.props.state.product.description;
+        
        // pick default selected product image
        this.handleImgSelect(this.props.state.product.gallery[0]);
         
@@ -61,6 +65,7 @@ class ProductDescription extends React.Component {
     render(){
         const {id, attributes, name, brand, description, gallery, inStock} = this.props.state.product;
         const currencyDetails = getSelectedCurrencyDetails(this.props.state.product.prices, this.props.selectedCurrency[1]);
+        
         return(
             <div className='product-description-container'>
                <Modal 
@@ -137,7 +142,7 @@ class ProductDescription extends React.Component {
                      <Button buttonType={'bigPrimary'} type='button' onClick={()=>inStock === true ? this.handleAddToCart() : this.toggleModal()}>Add to cart</Button>
                     </div>
                     
-                    <div className="product-description" dangerouslySetInnerHTML={{__html: description}}/>
+                    <div className="product-description" ref={this.myRef}></div>
                 </div>
             </div>
         )
