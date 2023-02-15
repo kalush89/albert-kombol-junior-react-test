@@ -65,13 +65,13 @@
     width: 55px;
     font-weight: 500;
     font-size: 16px;
-    margin-right: 139px;
+    margin-right: 83px;
 }
 
 .cart-overlay-container .cart-overlay-main .total-container-overlay .total-amount {
     font-weight: 700;
     font-size: 16px;
-    width: 95px;
+    width: 150px;
     display: flex;
     justify-content: flex-end;
 }
