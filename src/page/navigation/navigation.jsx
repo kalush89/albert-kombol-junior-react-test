@@ -52,7 +52,6 @@ class Navigation extends React.Component {
       }
 
     render(){
-        console.log(this.state.cartOverlayOpen)
         const { categories, activeCategory, selectedCurrency, cartCount } = this.props;
         const style = {
             transform: this.state.currencyDropDown ? 'rotate(180deg)' : '', 
@@ -62,7 +61,7 @@ class Navigation extends React.Component {
             <div className="container">
                 <div className="nav-wrapper">
                     <div className="category-nav-container">
-                        {categories.map(category => (
+                        {categories.map((category) => (
                             <Link key={category.name} className={`${activeCategory === category.name ? 'active':''}`} onClick={() => this.setActive(category.name)} to={{pathname: "/", search: `category=${category.name}` }}>{category.name}</Link>
                         ))}
                     </div>

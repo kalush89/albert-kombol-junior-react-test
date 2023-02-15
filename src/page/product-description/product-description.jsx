@@ -63,7 +63,7 @@ class ProductDescription extends React.Component {
 
 
     render(){
-        const {id, attributes, name, brand, description, gallery, inStock} = this.props.state.product;
+        const {id, attributes, name, brand, gallery, inStock} = this.props.state.product;
         const currencyDetails = getSelectedCurrencyDetails(this.props.state.product.prices, this.props.selectedCurrency[1]);
         
         return(

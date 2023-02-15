@@ -9,7 +9,6 @@ const initialState = {
     sliderImagesInView: [],
     tax: 0,
     flashIsActive: false,
-    
 }
 
 export const cartSlice = createSlice({

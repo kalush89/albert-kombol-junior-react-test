@@ -12,7 +12,7 @@
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.modal-content {
+.modal-container .modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,7 +22,7 @@
     width: 400px;
 }
 
-.modal-head {
+.modal-container .modal-content .modal-head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,17 +30,19 @@
     margin: 0 20px;
 }
 
-.close-button {
+.modal-container .modal-content .modal-head .close-button {
     text-align: center;
     cursor: pointer;
+    border: 1px solid black;
+    padding: 0 4px;
 }
 
-.close-button:hover {
+.modal-container .modal-content .modal-head .close-button:hover {
     background-color: lightgray;
 }
 
 
-.modal-title {
+.modal-container .modal-content .modal-head .modal-title {
     font-family: 'Raleway';
     font-style: normal;
     font-size: 15px;
@@ -48,17 +50,17 @@
 
 
 
-.divider {
+.modal-container .modal-content .divider {
     border: 1px solid #E5E5E5;
     width: 100%;
     margin: 10px 0;
 }
 
-.modal-foot {
+.modal-container .modal-content .modal-foot {
     margin: 0 20px;
 }
 
-.modal-foot.msg {
+.modal-container .modal-content .modal-foot .msg {
     font-family: 'Raleway';
     font-style: normal;
     font-size: 20px;
@@ -66,7 +68,7 @@
 }
 
 
-.confirm-controls {
+.modal-container .modal-content .modal-foot .confirm-controls {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -74,7 +76,7 @@
     width: 100%;
 }
 
-.notify-controls {
+.modal-container .modal-content .modal-foot .notify-controls {
     margin: 10px 0;
     width: 100%;
 }
