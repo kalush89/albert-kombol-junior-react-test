@@ -20,16 +20,16 @@ This is an upgraded version of the [Entry react dev test](https://github.com/kal
 
 ### Learning points/ fixes
 
-1 [x] Not possible to distinguish white color attribute: Now able to distinguish the white color attribute.
-2 [x] Currency should also be opened on arrow click near currency icon: A click on the area on or around the currency symbol and chevron drops down the currency list.
-3 [x] Price should always have 2 digits after dot: Price always had two digits after the dot.
-4 [x] Minicart should close on clickoutside: Minicart closes on click outside dropdown area.
-5 [x] Too much duplicated requests and not needed requests, please check network tab: Irelevant requests cleared.
-6 [x] On category page should happen current category request and on product page current product request: Achieved.
-7 [x] Please dont use dangerouslySetInnerHtml or sanitize data, it have this name for a reason: dangerouslySetInnerHtml or sanitize data completely avoided.
-8 [x] Please remove all hardcoded data: Hardcoded data replaced with dynamic content.
-9 [x] Please fix code to not have different function for each category: Functions removed.
-10 [x] Please fix eslint errors: Fixed.
+- [x] Not possible to distinguish white color attribute: Now able to distinguish the white color attribute.
+- [x] Currency should also be opened on arrow click near currency icon: A click on the area on or around the currency symbol and chevron drops down the currency list.
+- [x] Price should always have 2 digits after dot: Price always had two digits after the dot.
+- [x] Minicart should close on clickoutside: Minicart closes on click outside dropdown area.
+- [x] Too much duplicated requests and not needed requests, please check network tab: Irelevant requests cleared.
+- [x] On category page should happen current category request and on product page current product request: Achieved.
+- [x] Please dont use dangerouslySetInnerHtml or sanitize data, it have this name for a reason: dangerouslySetInnerHtml or sanitize data completely avoided.
+- [x] Please remove all hardcoded data: Hardcoded data replaced with dynamic content.
+- [x] Please fix code to not have different function for each category: Functions removed.
+- [x] Please fix eslint errors: Fixed.
  
 
 ### Installing
