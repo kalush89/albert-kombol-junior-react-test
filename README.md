@@ -1,4 +1,4 @@
-# Scandiweb Junior Developer test assignment!
+# Scandiweb Junior Developer test redone!
 
 React(Create React App) e-commerce web app. Entry React developer Test by Scandiweb.
 
