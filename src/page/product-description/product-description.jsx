@@ -135,7 +135,7 @@ class ProductDescription extends React.Component {
                         <div className="price-label">price</div>
                         <div className="price-value">
                             <span className="cur-symbol">{currencyDetails[0].currency.symbol}</span>
-                            <span className="cur-amount">{currencyDetails[0].amount}</span>
+                            <span className="cur-amount">{currencyDetails[0].amount.toFixed(2)}</span>
                         </div>
                     </div>
                     <div className="add-product-to-cart">

@@ -30,7 +30,7 @@ class CartItemLeft extends Component {
                             }
                         
                             {
-                                selectedCurrency[0].amount
+                                selectedCurrency[0].amount.toFixed(2)
                             }
                         
                     </div>

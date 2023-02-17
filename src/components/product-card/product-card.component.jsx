@@ -64,7 +64,7 @@ class ProductCard extends React.PureComponent {
                     </span>
                     <span className="amount">
                         {
-                            currencyDetails[0].amount
+                            currencyDetails[0].amount.toFixed(2)
                         }
                     </span>
                 </div>
